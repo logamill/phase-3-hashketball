@@ -195,3 +195,14 @@ def big_shoe_rebounds
   player = sorted_shoes[(sorted_shoes.length - 1)]
   player[:rebounds]
 end
+
+
+def most_points_scored
+  sorted_points = all_players.sort do |player1, player2|
+    player1[:points] <=> player2[:points]
+  end
+  player = sorted_points[(sorted_points.length - 1)]
+  return player[:points]
+end
+
+most_points_scored()
